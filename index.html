@@ -20878,7 +20878,15 @@ function Animatable(key, increment, update) {
   abrirBtn.addEventListener('touchstart', function(e){ e.stopPropagation(); }, { passive: true });
   abrirBtn.addEventListener('click', function(){ abrirBtn.blur(); abrir(); });
   Array.prototype.forEach.call(panel.querySelectorAll('[data-cerrar]'), function(b){ b.addEventListener('click', cerrar); });
-  abrir();   // quien entra por el enlace ve primero las tarjetas
+  // Quien entra por el enlace ve primero las tarjetas. Y si vuelve a la portada (Quit, o al terminar),
+  // al elegir "New Game" o "Continue" las vuelve a ver: el motor avisa con el evento psplusGameStarted.
+  var vistasDesdeLaPortada = true;
+  if (typeof goToTitleScreen === 'function') {
+    var irALaPortada = goToTitleScreen;
+    goToTitleScreen = function(){ var r = irALaPortada.apply(this, arguments); vistasDesdeLaPortada = false; return r; };
+  }
+  document.addEventListener('psplusGameStarted', function(){ if (!vistasDesdeLaPortada) { vistasDesdeLaPortada = true; abrir(); } });
+  abrir();
 })();
 </script>
 </body>
