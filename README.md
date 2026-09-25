@@ -17,7 +17,7 @@ Juego web autónomo en **PuzzleScript Next**, con pixel-art 16-bit propio y tarj
 Hielo que desliza · portales por parejas (rojo, verde y azul) · vías que solo dejan entrar y salir cajas por sus extremos ·
 imán que clava cajas · sol interruptor que gira los imanes · cajas de plata para hacer de tope · contador de pasos.
 
-**Récord conocido: 120 pasos.** ¿Te atreves?
+**Récord conocido: 89 pasos.** ¿Te atreves?
 
 ## Créditos
 - Recreación, arte 16-bit y tarjetas: **Spider** (Fali + Claude), 2026
