@@ -10,7 +10,7 @@ Juego web autónomo en **PuzzleScript Next**, con pixel-art 16-bit propio y tarj
 ## Cómo se juega
 - **Objetivo:** lleva el cofre del corazón hasta la meta con forma de corazón.
 - **Flechas:** mover · **X** o **clic** en la araña dormida: cambiar de araña · **Z:** deshacer · **R:** reiniciar.
-- En pantalla táctil: desliza el dedo para moverte y toca la araña dormida para despertarla.
+- **En el móvil:** desliza el dedo para moverte y toca la pantalla para cambiar de araña; deshacer y reiniciar están en la pestaña del borde izquierdo.
 - Dentro del juego, el botón **«Cómo se juega»** abre las tarjetas con las reglas y las piezas.
 
 ## Piezas

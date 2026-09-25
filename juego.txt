@@ -2,9 +2,8 @@ title El Corazón Helado
 sprite_size 16
 author Spider
 realtime_interval 0.15
-mouse_left Click
 norepeat_action
-text_controls Flechas: mover. X o clic en la araña dormida: cambiar de araña. Z: deshacer. R: reiniciar.
+text_controls Flechas o deslizar: mover. X o tocar: cambiar de araña. Z: deshacer. R: reiniciar.
 
 ========
 OBJECTS
