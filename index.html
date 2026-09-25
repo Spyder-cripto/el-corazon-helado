@@ -20853,12 +20853,11 @@ function Animatable(key, increment, update) {
 <script>
 (function(){
   var panel = document.getElementById('ch-panel'), abrirBtn = document.getElementById('ch-abrir');
-  var CLAVE = 'elcorazonhelado.tarjetas', abierto = false, tragarEsc = false;
+  var abierto = false, tragarEsc = false;
   function abrir(){ panel.hidden = false; abierto = true; panel.scrollTop = 0; var c = panel.querySelector('.ch-cerrar'); if (c) c.focus(); }
   function cerrar(){
     panel.hidden = true; abierto = false;
     if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
-    try { localStorage.setItem(CLAVE, '1'); } catch (e) {}
   }
   // Con las tarjetas abiertas, el juego no recibe teclas (Esc cierra).
   ['keydown', 'keyup', 'keypress'].forEach(function(tipo){
@@ -20879,9 +20878,7 @@ function Animatable(key, increment, update) {
   abrirBtn.addEventListener('touchstart', function(e){ e.stopPropagation(); }, { passive: true });
   abrirBtn.addEventListener('click', function(){ abrirBtn.blur(); abrir(); });
   Array.prototype.forEach.call(panel.querySelectorAll('[data-cerrar]'), function(b){ b.addEventListener('click', cerrar); });
-  var visto = false;
-  try { visto = localStorage.getItem(CLAVE) === '1'; } catch (e) {}
-  if (!visto) abrir();
+  abrir();   // quien entra por el enlace ve primero las tarjetas
 })();
 </script>
 </body>
